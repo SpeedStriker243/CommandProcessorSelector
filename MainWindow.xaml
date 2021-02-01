@@ -1,0 +1,40 @@
+﻿<Window x:Class="CommandProcessSelector_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CommandProcessSelector_WPF"
+        mc:Ignorable="d"
+        Title="Command Processor Selector" Height="289" Width="434" ResizeMode="NoResize">
+    <Window.Icon>
+        <BitmapImage UriSource="file:///C:/Users/sonic/Desktop/cmdsmol.ico"/>
+    </Window.Icon>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="234*"/>
+            <ColumnDefinition Width="199*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="cmd" Content="Command Prompt" HorizontalAlignment="Left" Margin="16,15,0,0" VerticalAlignment="Top" Width="386" Height="62" Background="Black" Foreground="White" BorderBrush="White" Click="Cmd_Click" Grid.ColumnSpan="2" FontSize="16" HorizontalContentAlignment="Center"/>
+        <Button x:Name="powershell" Content="Windows PowerShell" HorizontalAlignment="Left" Margin="16,84,0,0" VerticalAlignment="Top" Width="386" Height="62" Foreground="White" BorderBrush="White" Click="Powershell_Click" Grid.ColumnSpan="2" FontSize="16">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF4E88EE" Offset="0"/>
+                    <GradientStop Color="#FF4375CE" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="wsl" Content="Windows Subsystem for Linux" HorizontalAlignment="Left" Margin="16,153,0,0" VerticalAlignment="Top" Width="386" Height="62" Foreground="White" BorderBrush="White" Background="#FFE95420" Click="Wsl_Click" Grid.ColumnSpan="2" FontSize="16"/>
+        <Label Content="1" HorizontalAlignment="Left" Margin="32,25,0,0" VerticalAlignment="Top" Height="37" Width="26" FontSize="22" Background="{x:Null}" Foreground="White"/>
+        <Label Content="2" HorizontalAlignment="Left" Margin="32,95,0,0" VerticalAlignment="Top" Height="37" Width="26" FontSize="22" Background="{x:Null}" Foreground="White"/>
+        <Label Content="3" HorizontalAlignment="Left" Margin="32,163,0,0" VerticalAlignment="Top" Height="37" Width="26" FontSize="22" Background="{x:Null}" Foreground="White"/>
+        <Label Content="Press ESC to close." HorizontalAlignment="Left" Margin="154,219,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="112" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+    </Grid>
+</Window>
